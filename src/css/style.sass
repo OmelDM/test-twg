@@ -1,0 +1,33 @@
+@import 'variables'
+
+body
+  background: $bg-color
+  color: #ccc
+
+.container
+  display: flex
+  justify-content: center
+
+.spinner-container
+  overflow: hidden
+  position: relative
+  width: $imgWidth
+  height: $imgWidth * $maxImgsInContainer
+
+  &:after
+    width: $imgWidth
+    height: $imgWidth * $maxImgsInContainer
+    position: absolute
+    content: ''
+
+.spinner
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  top: -$imgWidth
+
+  &__img
+    position: absolute
+    width: $imgWidth
+    height: $imgWidth
